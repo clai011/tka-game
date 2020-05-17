@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Mansalva&display=swap");
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Mansalva", cursive;
+  background-color: black;
+}
+.title {
+  padding-right: 10px;
+  margin-right: 5px;
+  font-size: 48px;
+  text-shadow: 5px 5px rgb(48, 48, 48);
+  -webkit-text-fill-color: #fff; /*Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+#head {
+  height: 48px;
+  width: 48px;
+  background-image: url("./assets/hst.png");
+  background-size: 48px 48px;
+  background-repeat: none;
+  position: absolute;
+}
+#body {
+  background-image: url("./assets/hst.png");
+  height: 48px;
+  width: 48px;
+  background-size: 48px 48px;
+  background-repeat: none;
+  position: absolute;
+}
+
+#board {
+  height: 700px;
+  width: 700px;
+  border: 1px black solid;
+  position: relative;
+  background-image: url("./assets/grass.png");
+}
+
+#apple {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+
+#bgm {
+  display: none;
+}
+
+.score {
+  margin-left: 20px;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 5px 5px rgb(48, 48, 48);
+  /* -webkit-text-fill-color: white; Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.scoreboard {
+  font-size: 48px;
+  margin-left: 10px;
+  color: #fff;
+  text-shadow: 5px 5px rgb(48, 48, 48);
+  /* -webkit-text-fill-color: white; Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#btn {
+  height: 40px;
+  width: 80px;
+  border-radius: 4px;
+  margin-right: 10px;
+}

@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Feed Caterpie</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="./src/assets/yx.png" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+
+<body>
+
+  <div id="container" class="container">
+    <div>
+      <p class="title">Catch YX!</p>
+    <ul style="color:white">
+      <li>
+        NOT FOR MOBILE DEVICES. Use arrow keys to move HST.
+    </li>
+    <li>There might be boundary glitches. Refresh for audio if there's no sound.</li>
+    <li>
+      Good luck. :D
+    </li></ul>
+    </div>
+    <button id="btn" type="button" onClick="refreshPage()">Play Again</button>
+
+    <audio id="bgm" preload="auto" autoplay loop>
+      <source src="./src/assets/pkpkpk.mp3" type="audio/mp3">
+    </audio>
+    <audio id="lost" src="./src/assets/lose.mp3"></audio>
+    <audio src="./src/assets/bgm.mp3.mp3" id="munch"></audio>
+    <audio src="./src/assets/cry.mp3" id="cry"></audio>
+    <div id="board"></div>
+    <div class="scoreboard">Score: <span id="score" class="score"> </span></div>
+
+
+
+
+  </div>
+
+
+  <!--
+<script src='src/Apple.js'></script>
+<script src='src/Head.js'></script>
+<script src='src/Body.js'></script>
+
+-->
+  <script src="./src/main.js"></script>
+  <script>
+    function refreshPage() {
+      window.location.reload();
+    }
+  </script>
+
+</html>
