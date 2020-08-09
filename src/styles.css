@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Mansalva&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Mansalva&display=swap"); */
 body {
   height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
-  font-family: "Mansalva", cursive;
+  /* font-family: "Mansalva", cursive; */
   background-color: black;
 }
 .title {
@@ -24,13 +24,13 @@ body {
 #head {
   height: 48px;
   width: 48px;
-  background-image: url("./assets/hst.png");
+  background-image: url("./assets/mc.jpg");
   background-size: 48px 48px;
   background-repeat: none;
   position: absolute;
 }
 #body {
-  background-image: url("./assets/pkpkpk.png");
+  background-image: url("./assets/pudding.png");
   height: 48px;
   width: 48px;
   background-size: 48px 48px;
@@ -39,10 +39,12 @@ body {
 }
 
 #board {
-  height: 700px;
-  width: 700px;
+  height: 600px;
+  width: 600px;
   border: 1px black solid;
   position: relative;
+  min-width: 50%;
+  min-height: 50%;
   background-image: url("./assets/grass.png");
 }
 

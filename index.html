@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Feed Caterpie</title>
+  <title>Victor, feed me!</title>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <link rel="shortcut icon" href="./src/assets/yx.png" type="image/x-icon">
 
@@ -14,7 +14,7 @@
 
   <div id="container" class="container">
     <div>
-      <p class="title">Catch YX!</p>
+      <p class="title">MC: Feed Me!</p>
     <ul style="color:white; width: 100px;">
       <li>
         NOT FOR MOBILE DEVICES.
@@ -22,6 +22,8 @@
     <li>Use arrow keys to move.</li>
     <li>There might be boundary glitches.</li>
     <li>Refresh for audio.</li>
+
+    <li><b>Speeds up after every 30 secs.</b></li>
     <li>
       Good luck.>:D
     </li></ul>
@@ -29,11 +31,11 @@
     <button id="btn" type="button" onClick="refreshPage()">Play Again</button>
 
     <audio id="bgm" preload="auto" autoplay loop>
-      <source src="./src/assets/pkpkpk.mp3" type="audio/mp3">
+      <source src="./src/assets/bgm.mp3" type="audio/mp3">
     </audio>
     <audio id="lost" src="./src/assets/lose.mp3"></audio>
-    <audio src="./src/assets/bgm.mp3.mp3" id="munch"></audio>
-    <audio src="./src/assets/cry.mp3" id="cry"></audio>
+    <audio src="./src/assets/dummy.mp3" id="munch"></audio>
+    <!-- <audio src="./src/assets/cry.mp3" id="cry"></audio> -->
     <div id="board"></div>
     <div class="scoreboard">Score: <span id="score" class="score"> </span></div>
 

@@ -10,14 +10,14 @@ $(document).ready(function () {
   class Apple {
     constructor($el) {
       this.node = $('<img id="apple"></img>');
-      this.node.attr("src", "src/assets/yx.png");
+      this.node.attr("src", "src/assets/vic.jpg");
       $el.prepend(this.node);
       function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
       }
       this.node.css({
-        top: getRandomInt(14) * 50,
-        left: getRandomInt(14) * 50,
+        top: getRandomInt(12) * 50,
+        left: getRandomInt(12) * 50,
       });
       // console.log(this.node.position());
     }
@@ -27,9 +27,9 @@ $(document).ready(function () {
   let cry = document.getElementById("cry");
   let fail = document.getElementById("lost");
 
-  function caterpieCry() {
-    cry.play();
-  }
+  // function caterpieCry() {
+  //   cry.play();
+  // }
   function pauseAudio() {
     audio.pause();
   }
@@ -59,10 +59,21 @@ $(document).ready(function () {
     constructor($el) {
       this.node = $('<div id="head"></div>');
       this.currentDirection = "right";
+      // SET SPEED, LOWER THE FASTER
       this.SPEED = 300;
       $el.append(this.node);
       this.node.css({ top: 0, left: 0 });
       setTimeout(this.move.bind(this), this.SPEED);
+      setInterval(() => {
+        this.SPEED = 250;
+      }, 30000); // speed up after 30 secs
+      // increase speed after 1 min
+      setInterval(() => {
+        this.SPEED = 200;
+      }, 60000);
+      setInterval(() => {
+        this.SPEED = 150;
+      }, 90000);
     }
 
     // same as Head.prototype.move = function() {...}
@@ -94,7 +105,7 @@ $(document).ready(function () {
         if (trail[i].left === position.left && trail[i].top === position.top) {
           pauseAudio();
           playMunch();
-          caterpieCry();
+
           alert("R.I.P. 2020-2020");
           playLostAudio();
           // head.currentDirection = '';
@@ -104,16 +115,16 @@ $(document).ready(function () {
 
       /*            =====               dEATh               ====== */
       if (
-        position.top > 650 ||
+        position.top > 550 ||
         position.top < 0 ||
-        position.left > 650 ||
+        position.left > 550 ||
         position.left < 0
       ) {
         // let board = document.getElementById('board');
         // let container = document.getElementById('container');
         // container.removeChild(board);
         pauseAudio();
-        caterpieCry();
+        // caterpieCry();
         alert(`Quest Failed. GG.`);
         playLostAudio();
         this.SPEED = 1000000000;
